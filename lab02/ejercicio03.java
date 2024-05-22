@@ -12,6 +12,5 @@ public class ejercicio03 {
             aux = aux + str.substring(i - 1, i);
         }
         return aux.equals(str);
-        
     }
 }
