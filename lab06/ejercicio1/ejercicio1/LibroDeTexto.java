@@ -1,21 +1,15 @@
 package ejercicio1;
-/**
- * LibroDeTexto
- */
-public class LibroDeTexto extends Libro{
-    private String curso;
+
+public class LibroDeTexto extends Libro<String> {
     public LibroDeTexto(String nombre, String autor, String curso) {
-        super(nombre, autor);
-        this.curso = curso;
+        super(nombre, autor, curso);
     }
+
     public String getCurso() {
-        return curso;
+        return getAtributoAdicional();
     }
+
     public void setCurso(String curso) {
-        this.curso = curso;
-    }
-    @Override
-    public String toString() {
-        return super.toString() + "\n" + getCurso();
+        setAtributoAdicional(curso);
     }
 }
